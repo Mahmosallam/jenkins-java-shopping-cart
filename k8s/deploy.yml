@@ -4,31 +4,31 @@ metadata:
   name: java-shop
 spec:
   replicas: 2
-  selector: 
-     matchLabels:
-       env: shop
+  selector:
+    matchLabels:
+      app: java-shop
   template:
     metadata:
       labels:
-        env: shop
+        app: java-shop
     spec:
       containers:
-       - name: java-shop
-         image: osos3/java-shop:latest
-         ports:
-           - containerPort: 8070
+        - name: java-shop
+          image: osos3/java-shop:latest
+          ports:
+            - containerPort: 8070
 ---
-
-apiVersion: v1 
+apiVersion: v1
 kind: Service
-metadata: 
+metadata:
   name: java-shop-svc
 spec:
-  type: LoadBalancer 
+  type: LoadBalancer
   selector:
-       env: shop
+    app: java-shop
   ports:
     - port: 8070
       targetPort: 8070
-      nodeport: 30008
+      nodePort: 30008
+
  
