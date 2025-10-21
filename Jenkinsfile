@@ -20,6 +20,7 @@ pipeline {
         }
 
         stage('OWASP Dependency Check') {
+            tools { jdk 'java11' }
             steps {
                 dependencyCheck additionalArguments: '--scan . --format HTML', odcInstallation: 'Default'
             }
@@ -31,6 +32,7 @@ pipeline {
         }
 
         stage('SonarQube Analysis') {
+            tools { jdk 'java11' }
             steps {
                 script {
                     def scannerHome = tool 'sonarqube'
