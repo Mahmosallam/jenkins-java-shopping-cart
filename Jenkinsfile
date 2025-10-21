@@ -2,7 +2,7 @@ pipeline {
     agent { label 'slave-1' }
     tools {
         maven 'mvn363'   
-        jdk 'Java8'      
+        jdk 'java8'      
     }
     stages {
         stage('build') {
