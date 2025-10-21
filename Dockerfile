@@ -8,6 +8,6 @@
 FROM openjdk:8-jre-alpine
 WORKDIR /app
 # COPY --from=build /app/target/*.jar app.jar
-COPY target/*.jar app.jar
+COPY target/shopping-cart-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8070
 ENTRYPOINT ["java", "-jar", "app.jar"]
