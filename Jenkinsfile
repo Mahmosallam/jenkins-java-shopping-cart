@@ -18,5 +18,12 @@ pipeline {
                 sh 'mvn test'
             }
         }
+
+        stage('Dockerized the app') {
+            steps {
+                echo "this is dockerize stage"
+                sh 'docker build -t java-shop -f Dockerfile .'
+            }
+        }
     }
 }
