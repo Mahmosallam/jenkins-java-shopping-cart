@@ -1,5 +1,8 @@
 # Shopping Cart (Spring Boot)
 
+![chrome_ymMVI40UFV](https://github.com/user-attachments/assets/6b932f9e-b0da-4600-9c1e-6773cfa5175c)
+
+
 A simple shopping cart web application built with Spring Boot 1.5.x, Spring Security, Thymeleaf, and JPA. The app uses an in‑memory H2 database by default and ships with a sample dataset.
 
 ## Features
@@ -98,5 +101,9 @@ kubectl apply -f k8s/deploy.yml --kubeconfig k8s/config --context sallam
 - Static assets under `src/main/resources/static`
 - Initial data under `src/main/resources/sql/import-h2.sql`
 
-## License
-This project is provided as-is for educational/demo purposes.
+## verdios for the work
+
+
+
+https://github.com/user-attachments/assets/d20da04f-6214-4bb9-a3a6-c908776f4273
+
